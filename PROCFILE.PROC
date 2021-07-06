@@ -1,1 +1,1 @@
-web: gunicorn ebay_auction1.py:app
+web: gunicorn ebay_auction1:app
