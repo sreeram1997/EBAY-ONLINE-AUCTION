@@ -1,1 +1,0 @@
-web: gunicorn ebay_auction1:app
