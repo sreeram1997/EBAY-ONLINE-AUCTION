@@ -4,10 +4,10 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open(r'LGBMmodel.pkl','rb'))
-@app.route('/',methods=['GET'])
+@app.route('/')
 def home():
     return render_template('new_ebay.html')
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['POST','GET'])
 def predict():
     try:
         Bid = float(request.form['Bid'])
